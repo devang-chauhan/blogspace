@@ -4,7 +4,9 @@
 }
 
 body,
-button {
+button,
+input,
+textarea {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
@@ -15,15 +17,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    background-color: #fefae0;
 
 }
 
 nav {
+    width: 100%;
     font-size: 1.2rem;
     font-weight: 900;
-    background: white;
+    background: #d4a373;
     position: fixed;
-    padding: 1em;
+    padding: 0.5em;
     text-align: center;
 }
 
@@ -33,37 +37,33 @@ nav {
 
 /* form */
 form {
-    width: 100%;
-    margin-top: 3.8em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-form div {
-    width: 100%;
-    margin-top: 0.8em;
-    display: flex;
-    justify-content: center;
-}
-
-label {
-    width: 50px;
-    margin-right: 1em;
-    display: flex;
-    align-items: center;
-}
-
-.input {
-    width: 100%;
-}
-
-#button button {
-    width: 100%;
-    padding: 0.5em 2em;
+    box-sizing: border-box;
+    margin-top: 3.5em;
+    padding: 0.5em;
+    display: grid;
+    background-color: #faedcd;
     border-radius: 5px;
+}
+
+input,
+textarea {
+    margin-top: 0.5em;
+    background-color: #fefae0;
     border: none;
+    border-radius: 5px;
+}
+
+input {
+    margin-bottom: 0.5em;
+}
+
+button {
+    margin: 0.5em 0 0 0;
+    padding: 0.5em 1em;
+    background-color: #ccd5ae;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -75,6 +75,7 @@ label {
 
 #blogs h3 {
     font-weight: 500;
+    margin-bottom: 0.5em;
 }
 
 #blogs p {
@@ -83,16 +84,18 @@ label {
 
 .post {
     margin-bottom: 1em;
+    background-color: #e9edc9;
+    border-radius: 5px;
+    padding: 0.5em;
 }
 
 @media (max-width: 450px) {
 
     body {
-        width: 95%;
-        margin: auto;
+        width: 100vw;
     }
 
     .container {
-        width: 100%;
+        width: 95%;
     }
 }

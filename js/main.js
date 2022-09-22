@@ -1,6 +1,4 @@
 
-const blogsEl = document.getElementById("blogs");
-
 function injectPosts(posts) {
     let html = '';
     for (let post of posts){
@@ -8,11 +6,10 @@ function injectPosts(posts) {
             <div class="post">
                 <h3>${post.title}</h3>
                 <p>${post.body}</p>
-                <hr />
             </div>
         `;
     }
-    blogsEl.innerHTML = html;
+    document.getElementById("blogs").innerHTML = html;
 }
 
 
@@ -26,6 +23,18 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     });
     
 
+
+
+document.getElementById("new-post").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const title = document.getElementById("title").value;
+    const body = document.getElementById("body").value;
+    const data = {
+        "title": title,
+        "body": body
+    };
+    console.log(data);
+});
 
 
 
