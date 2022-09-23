@@ -1,5 +1,6 @@
-### Blogspace ~ Tinder for Dogs.
+### Blogspace ~ A primitive blog post app.
 
-A basic web app interface created with vanilla JS and CSS.
+A basic web app interface created with vanilla JS and CSS to fetch and send blog posts
+using API calls.
 
-![App](/images/tindog.png)
+![App](/images/blogspace.png)
